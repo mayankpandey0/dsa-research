@@ -1,11 +1,18 @@
+"""Implementation of a Singly Linked List Data Structure."""
+
+
 class Node:
+    # pylint: disable=too-few-public-methods
     """A node in a singly linked list."""
+
     def __init__(self, data):
         self.data = data
         self.next = None
 
+
 class SinglyLinkedList:
     """Basic implementation of a singly linked list."""
+
     def __init__(self):
         self.head = None
 
@@ -15,7 +22,7 @@ class SinglyLinkedList:
         if not self.head:
             self.head = new_node
             return
-        
+
         current = self.head
         while current.next:
             current = current.next
@@ -31,7 +38,10 @@ class SinglyLinkedList:
         return False
 
     def to_list(self):
-        """Helper method to convert the linked list to a standard Python list (useful for testing)."""
+        """
+        Helper method to convert the linked list to a standard Python list
+        (useful for testing).
+        """
         result = []
         current = self.head
         while current:
